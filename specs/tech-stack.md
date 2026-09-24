@@ -30,12 +30,23 @@ Next.js is the recommended framework for AgentClinic.
 - NestJS - a heavier, backend-only framework that would still require a
   separate frontend to deliver the dashboard.
 
+## Database: SQLite
+
+AgentClinic uses SQLite for persistence.
+
+- Zero external infrastructure to run or deploy - fits a course/demo project
+  where students and conference-booth developers need to get up and running
+  quickly.
+- Plays well with the small, self-contained scope of AgentClinic's data
+  (agents, ailments, therapies, appointments, staff).
+- Early phases (per [roadmap.md](roadmap.md)) still use in-memory/seed data;
+  SQLite is introduced when the persistence-layer phase begins.
+
 ## Open decisions for later passes
 
 The following are intentionally left open and will be decided in a future
 pass:
 
-- Database / persistence layer (early phases use in-memory or seed data).
 - UI styling approach / component library.
 - Authentication strategy.
 - Testing framework.
